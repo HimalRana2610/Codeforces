@@ -5,6 +5,9 @@ int mex(vector<int> arr);
 
 int main()
 {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
     int t;
     cin >> t;
 
