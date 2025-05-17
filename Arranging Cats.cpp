@@ -1,0 +1,37 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int t;
+    cin >> t;
+
+    while(t--)
+    {
+        int n;
+        cin >> n;
+
+        string s, f;
+        cin >> s >> f;
+
+        int ins = 0, inf = 0;
+        for(int i = 0; i < n; i++)
+        {
+            if(s[i] == '1' && f[i] == '0')
+            {
+                ins++;
+            }
+            else if(s[i] == '0' && f[i] == '1')
+            {
+                inf++;
+            }
+        }
+
+        cout << min(ins, inf) + abs(ins - inf) << "\n";
+    }
+
+    return 0;
+}
